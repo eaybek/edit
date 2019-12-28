@@ -127,7 +127,7 @@ class Buffer:
                 self.cursor_decrease(times=1)
 
             match = sm.match(str(self.selectedline))
-            if match:
+            if match is not None:
                 return match
 
             if not reverse:
